@@ -1,6 +1,6 @@
 /**
  * @file    cmp.c
- * @brief   A file for COMPARISON functions
+ * @brief   A HEADER file for COMPARISON functions
  * @author  Jude Thaddeau Data
  * @note    GitHub: https://github.com/jtd-117
 */

@@ -21,9 +21,6 @@
 /**
  * @brief       UTILITY - SKIPS a line from an input file
  * @param[in]   file    The file whose line is to be SKIPPED
- * @note        ACKNOWLEDGEMENT
- *              Code used from COMP20003 Ed Discussion: W3.7's 
- *              data.c file
 */
 void 
 file_skip_line(FILE *file) {
