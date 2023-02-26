@@ -66,7 +66,7 @@ int main(int argc, char **argv) {
     qt_tree_t *qtree = qt_tree_init(root_bounds);
 
     // STEP 4: Initialise the linked-list (STORE data entries)
-    sll_t *list = dll_init();
+    sll_t *list = sll_init();
 
     // STEP 5: Skip the header & read the data into the quad-tree
     data_t *tmp_data = NULL;
@@ -86,18 +86,18 @@ int main(int argc, char **argv) {
         tmp_point = NULL;
 
         // STEP 5C: Store the data into the linked-list
-        dll_insert_tail(list, tmp_data);
+        sll_insert_tail(list, tmp_data);
     }
 
     // STEP 6: Perform the stage-specifc tasks of STAGE 3 or 4
     if (stage_number == MODE_1) {
-        stage_three_query(output_file, qtree);
+        point_query(output_file, qtree);
     } else if (stage_number == MODE_2) {
-        stage_four_query(output_file, qtree);
+        range_query(output_file, qtree);
     }
     
     // STEP 7: Free the heap of previous memory allocations, & close files
-    dll_free(list);
+    sll_free(list);
     qt_free(qtree);
     fclose(input_file);
     fclose(output_file);
