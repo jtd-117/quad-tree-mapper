@@ -1,3 +1,12 @@
+# Project: quad-tree-mapper
+# Name: Jude Thaddeau Data
+# GitHub: https://github.com/jtd-117
+
+# Program to execute a point query
 mode1
+
+# Program to execute a range query
 mode2
+
+# All .o files produces as a result of compilation
 src/*.o
