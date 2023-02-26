@@ -2,7 +2,7 @@
  * @file    dynamic-array.h
  * @brief   A HEADER file for the implementation of a dynamic array
  * @author  Jude Thaddeau Data
- * @note    https://github.com/jtd-117
+ * @note    GitHub: https://github.com/jtd-117
 */
 /* -------------------------------------------------------------------------- */
 
