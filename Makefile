@@ -1,4 +1,4 @@
-# Makefile - Quad-Tree Mapper
+# Project: quad-tree-mapper
 # Name: Jude Thaddeau Data
 # GitHub: https://github.com/jtd-117
 # -------------------------------------------------------------------------- #
