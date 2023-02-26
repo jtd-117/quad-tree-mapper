@@ -43,100 +43,100 @@ dynamic-array.o: data.h dynamic-array.c dynamic-array.h
 
 # PROGRAM EXECUTIONS - MODE 1
 m1-d1:
-	./dict3 3 tests/dataset_1.csv output.out 144.969 -37.7975 144.971 -37.7955 < tests/test1.s3.in > output.stdout.out
+	./mode1 1 tests/dataset_1.csv output.out 144.969 -37.7975 144.971 -37.7955 < tests/test1.s3.in > output.stdout.out
 
 m1-d2:
-	./dict3 3 tests/dataset_1.csv output.out 144.969 -37.7965 144.971 -37.795 < tests/test2.s3.in > output.stdout.out
+	./mode1 1 tests/dataset_1.csv output.out 144.969 -37.7965 144.971 -37.795 < tests/test2.s3.in > output.stdout.out
 
 m1-d3:
-	./dict3 3 tests/dataset_1.csv output.out 144.969 -37.7965 144.9725 -37.7945 < tests/test3.s3.in > output.stdout.out
+	./mode1 1 tests/dataset_1.csv output.out 144.969 -37.7965 144.9725 -37.7945 < tests/test3.s3.in > output.stdout.out
 
 m1-d4:
-	./dict3 3 tests/dataset_1.csv output.out 144.969 -37.7965 144.976 -37.7925 < tests/test4.s3.in > output.stdout.out
+	./mode1 1 tests/dataset_1.csv output.out 144.969 -37.7965 144.976 -37.7925 < tests/test4.s3.in > output.stdout.out
 
 m1-d5:
-	./dict3 3 tests/dataset_2.csv output.out 144.968 -37.797 144.977 -37.79 < tests/test5.s3.in > output.stdout.out
+	./mode1 1 tests/dataset_2.csv output.out 144.968 -37.797 144.977 -37.79 < tests/test5.s3.in > output.stdout.out
 
 m1-d6:
-	./dict3 3 tests/dataset_20.csv output.out 144.952 -37.81 144.978 -37.79 < tests/test6.s3.in > output.stdout.out
+	./mode1 1 tests/dataset_20.csv output.out 144.952 -37.81 144.978 -37.79 < tests/test6.s3.in > output.stdout.out
 
 m1-d7:
-	./dict3 3 tests/dataset_100.csv output.out 144.9538 -37.812 144.9792 -37.784 < tests/test7.s3.in > output.stdout.out
+	./mode1 1 tests/dataset_100.csv output.out 144.9538 -37.812 144.9792 -37.784 < tests/test7.s3.in > output.stdout.out
 
 m1-d8:
-	./dict3 3 tests/dataset_1000.csv output.out 144.9375 -37.8750 145.0000 -37.6875 < tests/test8.s3.in > output.stdout.out
+	./mode1 1 tests/dataset_1000.csv output.out 144.9375 -37.8750 145.0000 -37.6875 < tests/test8.s3.in > output.stdout.out
 
 # -------------------------------------------------------------------------- #
 
 # PROGRAM EXECUTIONS - MODE 2
 
 m2-d1:
-	./dict4 4 tests/dataset_1.csv output.out 144.969 -37.7975 144.971 -37.7955 < tests/test9.s4.in > output.stdout.out
+	./mode2 2 tests/dataset_1.csv output.out 144.969 -37.7975 144.971 -37.7955 < tests/test9.s4.in > output.stdout.out
 
 m2-d2:
-	./dict4 4 tests/dataset_1.csv output.out 144.969 -37.7965 144.9725 -37.7945 < tests/test10.s4.in > output.stdout.out
+	./mode2 2 tests/dataset_1.csv output.out 144.969 -37.7965 144.9725 -37.7945 < tests/test10.s4.in > output.stdout.out
 
 m2-d3:
-	./dict4 4 tests/dataset_2.csv output.out 144.968 -37.797 144.977 -37.79 < tests/test11.s4.in > output.stdout.out
+	./mode2 2 tests/dataset_2.csv output.out 144.968 -37.797 144.977 -37.79 < tests/test11.s4.in > output.stdout.out
 
 m2-d4:
-	./dict4 4 tests/dataset_20.csv output.out 144.952 -37.81 144.978 -37.79 < tests/test12.s4.in > output.stdout.out
+	./mode2 2 tests/dataset_20.csv output.out 144.952 -37.81 144.978 -37.79 < tests/test12.s4.in > output.stdout.out
 
 m2-d5:
-	./dict4 4 tests/dataset_100.csv output.out 144.9375 -37.8750 145.0000 -37.6875 < tests/test13.s4.in > output.stdout.out
+	./mode2 2 tests/dataset_100.csv output.out 144.9375 -37.8750 145.0000 -37.6875 < tests/test13.s4.in > output.stdout.out
 
 m2-d6:
-	./dict4 4 tests/dataset_1000.csv output.out 144.9375 -37.8750 145.0000 -37.6875 < tests/test14.s4.in > output.stdout.out
+	./mode2 2 tests/dataset_1000.csv output.out 144.9375 -37.8750 145.0000 -37.6875 < tests/test14.s4.in > output.stdout.out
 
 # -------------------------------------------------------------------------- #
 
 # VALGRIND DEBUGGING - MODE 1
 
 v-m1-d1:
-	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./dict3 3 tests/dataset_1.csv output.out 144.969 -37.7975 144.971 -37.7955 < tests/test1.s3.in > output.stdout.out
+	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./mode1 1 tests/dataset_1.csv output.out 144.969 -37.7975 144.971 -37.7955 < tests/test1.s3.in > output.stdout.out
 
 v-m1-d2:
-	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./dict3 3 tests/dataset_1.csv output.out 144.969 -37.7965 144.971 -37.795 < tests/test2.s3.in > output.stdout.out
+	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./mode1 1 tests/dataset_1.csv output.out 144.969 -37.7965 144.971 -37.795 < tests/test2.s3.in > output.stdout.out
 
 v-m1-d3:
-	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./dict3 3 tests/dataset_1.csv output.out 144.969 -37.7965 144.9725 -37.7945 < tests/test3.s3.in > output.stdout.out
+	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./mode1 1 tests/dataset_1.csv output.out 144.969 -37.7965 144.9725 -37.7945 < tests/test3.s3.in > output.stdout.out
 
 v-m1-d4:
-	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./dict3 3 tests/dataset_1.csv output.out 144.969 -37.7965 144.976 -37.7925 < tests/test4.s3.in > output.stdout.out
+	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./mode1 1 tests/dataset_1.csv output.out 144.969 -37.7965 144.976 -37.7925 < tests/test4.s3.in > output.stdout.out
 
 v-m1-d5:
-	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./dict3 3 tests/dataset_2.csv output.out 144.968 -37.797 144.977 -37.79 < tests/test5.s3.in > output.stdout.out
+	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./mode1 1 tests/dataset_2.csv output.out 144.968 -37.797 144.977 -37.79 < tests/test5.s3.in > output.stdout.out
 
 v-m1-d6:
-	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./dict3 3 tests/dataset_20.csv output.out 144.952 -37.81 144.978 -37.79 < tests/test6.s3.in > output.stdout.out
+	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./mode1 1 tests/dataset_20.csv output.out 144.952 -37.81 144.978 -37.79 < tests/test6.s3.in > output.stdout.out
 
 v-m1-d7:
-	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./dict3 3 tests/dataset_100.csv output.out 144.9538 -37.812 144.9792 -37.784 < tests/test7.s3.in > output.stdout.out
+	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./mode1 1 tests/dataset_100.csv output.out 144.9538 -37.812 144.9792 -37.784 < tests/test7.s3.in > output.stdout.out
 
 v-m1-d8:
-	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./dict3 3 tests/dataset_1000.csv output.out 144.9375 -37.8750 145.0000 -37.6875 < tests/test8.s3.in > output.stdout.out
+	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./mode1 1 tests/dataset_1000.csv output.out 144.9375 -37.8750 145.0000 -37.6875 < tests/test8.s3.in > output.stdout.out
 
 # -------------------------------------------------------------------------- #
 
 # VALGRIND DEBUGGING - MODE 2
 
 v-m2-d1:
-	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./dict4 4 tests/dataset_1.csv output.out 144.969 -37.7975 144.971 -37.7955 < tests/test9.s4.in > output.stdout.out
+	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./mode2 2 tests/dataset_1.csv output.out 144.969 -37.7975 144.971 -37.7955 < tests/test9.s4.in > output.stdout.out
 
 v-m2-d2:
-	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./dict4 4 tests/dataset_1.csv output.out 144.969 -37.7965 144.9725 -37.7945 < tests/test10.s4.in > output.stdout.out
+	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./mode2 2 tests/dataset_1.csv output.out 144.969 -37.7965 144.9725 -37.7945 < tests/test10.s4.in > output.stdout.out
 
 v-m2-d3:
-	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./dict4 4 tests/dataset_2.csv output.out 144.968 -37.797 144.977 -37.79 < tests/test11.s4.in > output.stdout.out
+	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./mode2 2 tests/dataset_2.csv output.out 144.968 -37.797 144.977 -37.79 < tests/test11.s4.in > output.stdout.out
 
 v-m2-d4:
-	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./dict4 4 tests/dataset_20.csv output.out 144.952 -37.81 144.978 -37.79 < tests/test12.s4.in > output.stdout.out
+	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./mode2 2 tests/dataset_20.csv output.out 144.952 -37.81 144.978 -37.79 < tests/test12.s4.in > output.stdout.out
 
 v-m2-d5:
-	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./dict4 4 tests/dataset_100.csv output.out 144.9375 -37.8750 145.0000 -37.6875 < tests/test13.s4.in > output.stdout.out
+	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./mode2 2 tests/dataset_100.csv output.out 144.9375 -37.8750 145.0000 -37.6875 < tests/test13.s4.in > output.stdout.out
 
 v-m2-d6:
-	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./dict4 4 tests/dataset_1000.csv output.out 144.9375 -37.8750 145.0000 -37.6875 < tests/test14.s4.in > output.stdout.out
+	valgrind --tool=memcheck --leak-check=full --track-origins=yes -s ./mode2 2 tests/dataset_1000.csv output.out 144.9375 -37.8750 145.0000 -37.6875 < tests/test14.s4.in > output.stdout.out
 
 # -------------------------------------------------------------------------- #
 
