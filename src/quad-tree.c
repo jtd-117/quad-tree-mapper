@@ -24,6 +24,17 @@
 
 /* -------------------------------------------------------------------------- */
 
+// AUXILLARY PROTOTYPE FUNCTIONS:
+int qt_recursive_insert(qt_tree_t *tree, qt_node_t *root, point_2d_t *point, data_t *data);
+void qt_recursive_range_query(qt_node_t *root, char *path, rectangle_t *range, array_t *matches);
+void qt_recursive_free(qt_tree_t *tree, qt_node_t *root);
+void qt_subdivide(qt_tree_t *tree, qt_node_t *root);
+int qt_determine_quadrant(qt_node_t *root, point_2d_t *point);
+void qt_repair_internal(qt_node_t *root);
+
+
+/* -------------------------------------------------------------------------- */
+
 /**
  * @brief       INITIALISES an EMPTY quad-tree NODE
  * @param[out]  tree    The quad-tree which will have a new node
