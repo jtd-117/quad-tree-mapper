@@ -10,7 +10,7 @@ CFLAGS = -Wall -g
 EXE3 = mode1
 EXE4 = mode2
 
-SRC = main.c cmp.c data.c coordinates.c dynamic-array.c quad-tree.c sll.c
+SRC = src/main.c src/cmp.c src/data.c src/coordinates.c src/dynamic-array.c src/quad-tree.c src/sll.c
 OBJ = $(SRC:.c=.o)
 
 # -------------------------------------------------------------------------- #
