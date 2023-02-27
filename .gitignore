@@ -10,3 +10,6 @@ mode2
 
 # All .o files produces as a result of compilation
 src/*.o
+
+# All .out (output) files
+*.out
