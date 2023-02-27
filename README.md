@@ -11,6 +11,8 @@
 ## Project Overview:
 This project uses a point-region (PR) [quad-tree](https://en.wikipedia.org/wiki/Quadtree#:~:text=A%20quadtree%20is%20a%20tree,into%20four%20quadrants%20or%20regions.) to record 2-dimensional (x,y) coordinates and store them on a map. After recording the data users can then search for a SINGLE point (i.e. mode 1), or search for a COLLECTION of points via a RANGE query (i.e mode 2). Note, each coordinate may contain 'additional information' (e.g. longitude, latitude, etc...) which can further be collected & queried/filtered.
 
+The CSV data must contain at LEAST a pair of (x,y) coordinates & may optionally contain other meta-data. In the event that the CSV data format is different to the [sample dataset](#sample-dataset), changes must be made to `data.h` & `data.c` for the program to function properly. Furthermore, the input files serve the purpose storing the (x,y) that will be used to query/search the quad-tree.
+
 A `point` query will search the quad-tree if it exists on the map. If the point exists the program will output to two locations being:
 <ul>
     <li>output.out: A file containing the matched coordinates & it's meta-data</li>
@@ -80,7 +82,7 @@ A `range` query will search within a rectangle of the quad-tree. Similar to the 
             <td colspan=2>1. Click the `Code` button</td>
         </tr>
         <tr>
-            <td>2. Using either the `HTTPS` or `SSH` copy the link</td>
+            <td>2. Using either the `HTTPS` or `SSH` option, copy the link</td>
             <td>2. Click on `Download ZIP`</td>
         </tr>
         <tr>
