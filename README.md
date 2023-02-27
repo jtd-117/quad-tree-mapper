@@ -93,7 +93,19 @@ A `range` query will search within a rectangle of the quad-tree. Similar to the 
 </table>
 
 ## Use:
-
+1. Compile the code: `make compile`
+2. Perform ONE of the two queries:
+<table>
+    <tr>
+        <th>Point Query:</th>
+        <td>./mode1 1 dataset-file output-file root-bottom-left-y root-bottom-left-x root-top-left-y root-top-left-x < input-file > standard-output-file</td>
+    </tr>
+    <tr>
+        <th>Range Query:</th>
+        <td>./mode2 2 dataset-file output-file root-bottom-left-y root-bottom-left-x root-top-left-y root-top-left-x < input-file > standard-output-file</td>
+    </tr>
+</table>
+NOTE: it is more CONVENIENT to automate any of the above queries as part of the `Makefile` (i.e. see 'PROGRAM EXECUTIONS' for examples)
 
 ## Sample Dataset:
 The dataset used to test this project comes from the [The City Of Melbourne Open Data](https://data.melbourne.vic.gov.au/) website. In particular, the [Footpath Steepness](https://data.melbourne.vic.gov.au/explore/dataset/footpath-steepness/information/?location=12,-37.81309,144.94569&basemap=mbs-7a7333) dataset was combined with the [Small Areas for Census of Land Use and Employment (CLUE)](https://www.melbourne.vic.gov.au/about-melbourne/research-and-statistics/city-economy/census-land-use-employment/Pages/clue-data-reports.aspx) dataset to create the 'additional attributes':
